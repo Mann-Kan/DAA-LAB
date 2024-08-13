@@ -57,7 +57,11 @@ int main()
 {
         arr[i] = rand()%N;
     }
- 
+    int arr2[N];
+for(int j=0; j<N; j++)
+{
+        arr2[j] = arr[j];
+    }
     bubbleSort(arr, N);
     cout << "Sorted array: \n";
   
@@ -66,10 +70,10 @@ int main()
     cout<<endl<<"Time Taken: "<<endTime - startTime<<endl;
     
     int startTime1 = time(NULL);
-    selectionSort(arr, N);
+    selectionSort(arr2, N);
     cout << "Sorted array: \n";
   
-    printArray(arr, N);
+    printArray(arr2, N);
     int endTime1 = time(NULL);
     cout<<endl<<"Time Taken: "<<endTime1 - startTime1<<endl;
     return 0;
